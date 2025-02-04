@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <meta property="og:title" content=ValentinesDay>
+<meta property="og:site_name" content=ValentinesDay>
+<meta property="og:url" content=https://danielvitsu.github.io/Valentine123/>
+<meta property="og:description" content=DanielsValentine>
+<meta property="og:type" content=website>
+<meta property="og:image" content=https://pin.it/7colm8TpJ>
+</head>
+<body>
+    
+    <video id="current-video" width="400" autoplay loop style="display: none;">
+        <source src="valentine.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="container">
+        <img id="current-image" width="250" src="cat.gif" alt="Animated cat">
+        <audio id="background-music" autoplay loop muted>
+            <source src="beabadoobe.mp3" type="audio/mpeg">
+            <source src="beabadoobe.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let audio = document.getElementById("background-music");
+                audio.muted = false;  // Unmute after the page loads
+            });
+        </script>
+        
+         <!-- Container for displaying images -->
+        <div id="text-container">
+            <div id="question">aren will you be my valentine?<br>(please click yes)</div> <!-- Question -->
+            <div id="options">
+                <button id="yes-button" onclick="selectOption('yes')">Yes</button> <!-- Yes button -->
+                <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
